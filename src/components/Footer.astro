@@ -1,6 +1,52 @@
 ---
+import { Image } from "astro:assets";
+import Cta from "../components/Cta.astro";
+import incon_in from "./public/incon_in.png";
+import incon_yt from "./public/incon_yt.png";
+import icon_fb from "./public/icon_fb.png";
+import icon_ig from "./public/icon_ig.png";
+import icon_x from "./public/icon_x.png";
+import skraldebunke from "./public/skraldebunke.png";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
+
+<div class="bg-black mt-12">
+  <hr />
+  <section class="ml-6">
+    <article class="md:flex md:justify-center md:gap-16 md:mt-20 md:pb-10">
+      <div id="logo">
+        <a href="index.astro">
+          <img src="/logo.png" alt="logo" class="hover:opacity-75 w-24 sm:w-44 mt-4 md:w-24 lg:w-32 max-w-full" />
+        </a>
+      </div>
+      <div>
+        <p class="text-[#F5F5F5] mt-4">Mail. info@plasticchange.org</p>
+        <p class="text-[#F5F5F5]">Tlf. +45 42 66 72 46</p>
+      </div>
+      <div>
+        <p class="text-[#F5F5F5] mt-4">Telefontid. Mandag - Fredag</p>
+        <p class="text-[#F5F5F5]">10:00 - 15:00</p>
+      </div>
+      <div>
+        <p class="text-[#F5F5F5] mt-4">Website af Savage Studio</p>
+        <p class="text-[#F5F5F5] mb-4">© 2024 Plastic Change</p>
+      </div>
+      <div class="mt-4">
+        <Cta variant="primary" size="medium">Støt</Cta>
+      </div>
+    </article>
+
+    <article class="md:flex md:gap-20 md:justify-center">
+      <div>
+        <p class="text-[#F5F5F5] mt-4 md:text-5xl">#SingleUseSucks</p>
+      </div>
+      <div class="flex gap-4 h-5 w-5 mt-4 md:w-10 md:h-10">
+        <Image src={incon_in} alt="footerbillede" />
+        <Image src={incon_yt} alt="footerbillede" />
+        <Image src={icon_fb} alt="footerbillede" />
+        <Image src={icon_ig} alt="footerbillede" />
+        <Image src={icon_x} alt="footerbillede" />
+      </div>
+    </article>
+  </section>
+  <Image src={skraldebunke} alt="footerbillede" />
 </div>
-  
