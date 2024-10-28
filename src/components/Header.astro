@@ -1,5 +1,38 @@
 ---
+import Cta from "../components/Cta.astro";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full z-10">
+  <div id="navbar" class="flex flex-row justify-between">
+    <div id="logo">
+      <a href="/">
+        <img src="/logo.png" alt="logo" class="hover:opacity-75 w-16 sm:w-20 md:w-24 lg:w-32 max-w-full" />
+      </a>
+    </div>
+    <nav id="desktopmenu" class="hidden lg:flex flex-1 justify-center">
+      <ul class="flex flex-row gap-8 pr-8">
+        <li class="hover:opacity-75"><a href="registrer">Hvad er plastikforurening</a></li>
+        <li class="hover:opacity-75"><a href="ressourcer">Problemet med plastikforurening</a></li>
+        <li class="hover:opacity-75"><a href="howto">Hvad kan du gøre?</a></li>
+        <li class="hover:opacity-75"><a href="howto">Vores effekt</a></li>
+        <li class="hover:opacity-75"><a href="howto">Merchandise</a></li>
+      </ul>
+      <div>
+        <Cta variant="primary" size="medium">Støt</Cta>
+      </div>
+    </nav>
+
+    <button id="burgermenu" class="pr-4 lg:hidden hover:opacity-75" x-on:click="showmenu = ! showmenu">Menu</button>
+  </div>
 </div>
+
+<!-- Mobilmenu - kun synlig på mobile enheder -->
+<nav id="mobilmenu" class="fixed right-0 flex flex-col content-center pt-4 bg-white lg:hidden" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+  <ul class="text-center">
+    <li class="hover:opacity-75"><a href="registrer">Hvad er plastikforurening</a></li>
+    <li class="hover:opacity-75"><a href="ressourcer">Problemet med plastikforurening</a></li>
+    <li class="hover:opacity-75"><a href="howto">Hvad kan du gøre?</a></li>
+    <li class="hover:opacity-75"><a href="howto">Vores effekt</a></li>
+    <li class="hover:opacity-75"><a href="howto">Merchandise</a></li>
+  </ul>
+</nav>
