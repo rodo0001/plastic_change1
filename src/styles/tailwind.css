@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
+  h1 {
+    font-family: "MailRayStuff-Regular";
+  }
+  h2 {
+    font-family: "Trade Gothic LT";
+  }
+}
 
+/* font */
+@font-face {
+  font-family: "MailRayStuff-Regular";
+  src: url("../MailRayStuff-Regular.otf") format("otf"), url("../MailRayStuff-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Trade Gothic LT";
+  src: url("../Trade Gothic LT.ttf") format("ttf"), url("../Trade Gothic LT.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
 }
