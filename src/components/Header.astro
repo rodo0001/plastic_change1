@@ -22,17 +22,35 @@ import Cta from "../components/Cta.astro";
       </div>
     </nav>
 
-    <button id="burgermenu" class="pr-4 lg:hidden hover:opacity-75" x-on:click="showmenu = ! showmenu">Menu</button>
+    <!-- Burgermenu-knap til mobil -->
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
+      ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"></path>
+      </svg>
+    </button>
+
+    <!-- Mobilmenu - kun synlig på mobile enheder -->
+    <nav id="mobilmenu" class="fixed right-0 w-full flex flex-col items-center pt-4 bg-white lg:hidden" x-show="showmenu" x-transition x-cloak>
+      <ul class="text-center space-y-4">
+        <li class="hover:opacity-75"><a href="registrer">Hvad er plastikforurening</a></li>
+        <li class="hover:opacity-75"><a href="ressourcer">Problemet med plastikforurening</a></li>
+        <li class="hover:opacity-75"><a href="howto">Hvad kan du gøre?</a></li>
+        <li class="hover:opacity-75"><a href="howto">Vores effekt</a></li>
+        <li class="hover:opacity-75"><a href="howto">Merchandise</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        console.log(window.scrollY);
+        let navbar = document.getElementById("navbar");
+        if (this.window.scrollY > 6) {
+          navbar.classList.add("hidden");
+        }
+        if (this.window.scrollY < 6) {
+          navbar.classList.remove("hidden");
+        }
+      });
+    </script>
   </div>
 </div>
-
-<!-- Mobilmenu - kun synlig på mobile enheder -->
-<nav id="mobilmenu" class="fixed right-0 flex flex-col content-center pt-4 bg-white lg:hidden" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-  <ul class="text-center">
-    <li class="hover:opacity-75"><a href="registrer">Hvad er plastikforurening</a></li>
-    <li class="hover:opacity-75"><a href="ressourcer">Problemet med plastikforurening</a></li>
-    <li class="hover:opacity-75"><a href="howto">Hvad kan du gøre?</a></li>
-    <li class="hover:opacity-75"><a href="howto">Vores effekt</a></li>
-    <li class="hover:opacity-75"><a href="howto">Merchandise</a></li>
-  </ul>
-</nav>
