@@ -1,0 +1,62 @@
+<div class="relative bg-transparent shadow-md rounded px-8 pt-6 pb-8 border-corner max-w-4xl mx-auto max-w-[700px]">
+  <!-- Boksen indhold -->
+  <!-- <p class="text-gray-800">Dette er indholdet i boksen.</p> -->
+  <slot />
+  <!-- Custom CSS til at skabe hjørnebordere -->
+  <style>
+    .border-corner {
+      position: relative;
+    }
+
+    /* Øverste venstre hjørne - vandret linje */
+    .border-corner::before {
+      content: "";
+      position: absolute;
+      top: -15px; /* 15px udenfor boksen */
+      left: -15px; /* 15px udenfor boksen */
+      width: 120px; /* Juster længden */
+      height: 1px; /* Tykkelse af linjen */
+      background-color: white;
+    }
+
+    /* Øverste venstre hjørne - lodret linje */
+    .border-corner::after {
+      content: "";
+      position: absolute;
+      top: -15px; /* 5px udenfor boksen */
+      left: -15px; /* 5px udenfor boksen */
+      width: 1px; /* Tykkelse af linjen */
+      height: 80px; /* Juster længden */
+      background-color: white;
+    }
+
+    /* Nederste højre hjørne - vandret linje */
+    .border-corner-bottom::before {
+      content: "";
+      position: absolute;
+      bottom: -15px; /* 5px udenfor boksen */
+      right: -15px; /* 5px udenfor boksen */
+      width: 120px; /* Juster længden */
+      height: 1px; /* Tykkelse af linjen */
+      background-color: white;
+    }
+
+    /* Nederste højre hjørne - lodret linje */
+    .border-corner-bottom::after {
+      content: "";
+      position: absolute;
+      bottom: -15px; /* 5px udenfor boksen */
+      right: -15px; /* 5px udenfor boksen */
+      width: 1px; /* Tykkelse af linjen */
+      height: 80px; /* Juster længden */
+      background-color: white;
+    }
+
+    .bg-transparent {
+      background-color: #f5f5f531; /* Juster alpha-værdien for at ændre gennemsigtigheden */
+    }
+  </style>
+
+  <!-- Nederste højre hjørne -->
+  <div class="border-corner-bottom"></div>
+</div>

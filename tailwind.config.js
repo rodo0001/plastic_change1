@@ -6,6 +6,7 @@ export default {
       colors: {
         blue: "#64C0FF",
         peach: "#FF6F61",
+        creme: "#F5F5F5",
       },
     },
   },

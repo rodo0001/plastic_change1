@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Boks from "../components/Boks.astro";
 import Cta from "../components/Cta.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
@@ -11,49 +12,81 @@ import rings from "./public/rings.png";
 import skraldepose from "./public/skraldepose.png";
 import havet from "./public/havet_tal.svg";
 import graf from "./public/graf.svg";
+import figur_skrald from "./public/figur_skrald.svg";
 ---
 
 <MainLayout title="Titel">
   <article>
     <!-- hero-->
-    <section class="max-w-4xl mx-auto pt-[7rem] sm:pt-0">
-      <h1 class="sm:ml-6 lg:text-left text-7xl text-[#F5F5F5] lg:text-9xl lg:pt-[100px]">Slå op <br /> med plastik nu!</h1>
-      <h2 class="text-center text-3xl lg:text-5xl lg:text-right text-peach">#SingleUseSucks</h2>
-      <Button>STOP MED PLASTIKFORURENING NU!</Button>
-      <div class="relative h-screen">
-        <Image src={bjarne} alt="" class="absolute lg:top-[-488px] lg:left-[406px] lg:w-[380px] w-[180px] h-auto animate-float top-[-220px] left-[280px]" />
-        <Image src={rings} alt="" class="absolute lg:top-[-40px] lg:left-[620px] w-32 h-auto top-[-20px] left-[280px] animate-float" />
-        <Image src={skraldepose} alt="" class="absolute lg:top-[-60px] lg:left-[80px] w-40 h-auto animate-float top-[-20px] left-[40px]" />
-      </div>
-    </section>
-    <section class="" id="herovideo">
-      <video width="1200" height="960" autoplay muted loop>
-        <source src="hero.webm" type="video/webm" />
-      </video>
-    </section>
-    <section>
-      <h2 class="flex justify-center mb-10">1 Hvad er plastikforurening?</h2>
-      <hr class="ml-8 mr-8" />
-      <div>
-        <p class="ml-8 mr-8 mt-10 mb-6 md:max-w-xl">Plastikforurening sker, når plastik ender i naturen og skader både dyr, mennesker og miljøet. Problemet opstår ofte, når plastikaffald ikke bliver smidt ud på den rigtige måde og derfor havner i havet, floder og søer.</p>
-      </div>
-      <div>
-        <Image src={havet} alt="havet figur" />
-      </div>
+    <div>
+      <section class="max-w-4xl mx-auto pt-[7rem] sm:pt-0">
+        <h1 class="sm:ml-6 lg:text-left text-7xl text-creme lg:text-9xl lg:pt-[100px]">Slå op <br /> med plastik nu!</h1>
+        <h2 class="text-center text-3xl lg:text-5xl lg:text-right text-peach">#SingleUseSucks</h2>
+        <Button>STOP MED PLASTIKFORURENING NU!</Button>
+        <div class="relative">
+          <Image src={bjarne} alt="" class="absolute lg:top-[-488px] lg:left-[406px] lg:w-[380px] w-[180px] h-auto animate-float top-[-220px] left-[280px]" />
+          <Image src={rings} alt="" class="absolute lg:top-[-40px] lg:left-[620px] w-32 h-auto top-[-20px] left-[280px] animate-float" />
+          <Image src={skraldepose} alt="" class="absolute lg:top-[-60px] lg:left-[80px] w-40 h-auto animate-float top-[-20px] left-[40px]" />
+        </div>
+      </section>
+      <section class="" id="herovideo">
+        <video width="1200" height="960" autoplay muted loop>
+          <source src="hero.webm" type="video/webm" />
+        </video>
+      </section>
+    </div>
 
-      <div class="ml-8 mt-8 md:flex md:justify-end fotoinview">
-        <Image src={graf} alt="graf" />
-      </div>
-    </section>
+    <!-- sektion Hvad er plastikforurening -->
+    <div class="mt-[12rem]">
+      <section>
+        <h2 class="flex justify-center mb-10 text-6xl text-creme">1 Hvad er plastikforurening?</h2>
+        <hr class="ml-8 mr-8" />
+        <div>
+          <p class="ml-8 mr-8 mt-10 mb-6 md:max-w-xl text-creme">Plastikforurening sker, når plastik ender i naturen og skader både dyr, mennesker og miljøet. Problemet opstår ofte, når plastikaffald ikke bliver smidt ud på den rigtige måde og derfor havner i havet, floder og søer.</p>
+        </div>
+        <div>
+          <Image src={havet} alt="havet figur" />
+        </div>
 
+        <div class="ml-8 pt-6 md:w-9/12 md:flex md:justify-end md:ml-44 fotoinview">
+          <Image src={graf} alt="graf" />
+        </div>
+      </section>
+    </div>
     <div class="progress-bar h-4 fixed w-full bg-gradient-to-r from-[#ffd3cf] to-[#FF6F61] left-0 origin-top-left top-0 right-0"></div>
   </article>
-  <!-- sektion Hvad er plastikforurening -->
+
   <!-- sektion Problemet med plastikforurening -->
+
+  <div class="">
+    <section class="top-0 left-0 w-full h-full overflow-hidden" id="clearvideo">
+      <video class="w-full h-full object-cover" autoplay muted loop>
+        <source src="clearwater.webm" type="video/webm" />
+      </video>
+    </section>
+    <section class="max-w-4xl mx-auto pt-[7rem] sm:pt-0 relative h-full">
+      <h2 class="flex justify-center mb-10 text-6xl text-creme">2 Problemet med plastikforurening</h2>
+    </section>
+    <section class="flex justify-center">
+      <div class="pt-6 md:w-1/2">
+        <Image src={figur_skrald} alt="graf" />
+      </div>
+    </section>
+  </div>
   <!-- sektion Hvad kan du gøre? -->
+
   <!--  sektion Vores effekt -->
 
-  <!-- <Image src={thumbsup} alt="" /> -->
+  <section>
+    <hr />
+    <div>
+      <h2 class="text-center lg:text-4xl text-creme p-6">Tilmeld dig vores nyhedsbrev</h2>
+      <div class="flex justify-center items-center">
+        <input class="text-center shadow appearance-none border rounded-[100px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Indtast mail" />
+      </div>
+      <Button>Tilmeld</Button>
+    </div>
+  </section>
 </MainLayout>
 
 <script>
