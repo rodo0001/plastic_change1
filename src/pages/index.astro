@@ -5,6 +5,9 @@ import Cta from "../components/Cta.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import graf from "./public/graf.svg";
+import havet from "./public/figur_havet.svg";
+import havet2 from "./public/havet_tal.svg";
 ---
 
 <MainLayout title="Titel">
@@ -17,4 +20,29 @@ import thumbsup from "../assets/images/thumbsup.png";
 
     <!-- <Image src={thumbsup} alt="" /> -->
   </article>
+
+  <section>
+    <h2 class="flex justify-center mb-10">1 Hvad er plastikforurening?</h2>
+    <hr class="ml-8 mr-8" />
+    <div>
+      <p class="ml-8 mr-8 mt-10 mb-6 md:max-w-xl">Plastikforurening sker, når plastik ender i naturen og skader både dyr, mennesker og miljøet. Problemet opstår ofte, når plastikaffald ikke bliver smidt ud på den rigtige måde og derfor havner i havet, floder og søer.</p>
+    </div>
+    <div>
+      <Image src={havet2} alt="havet figur" />
+    </div>
+
+    <div class="ml-8 mt-8 md:flex md:justify-end fotoinview">
+      <Image src={graf} alt="graf" />
+    </div>
+  </section>
+
+  <div class="progress-bar h-4 fixed w-full bg-gradient-to-r from-[#ffd3cf] to-[#FF6F61] left-0 origin-top-left top-0 right-0"></div>
 </MainLayout>
+<script>
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+  scroll(animate(".progress-bar", { scaleX: [0, 1] }));
+
+  inView(".fotoinview", () => {
+    animate(".fotoinview", { x: [-2000, 0] }, { duration: 5 });
+  });
+</script>
