@@ -5,16 +5,35 @@ import Cta from "../components/Cta.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import hero from "..public/hero.webm";
+import bjarne from "./public/bjarne.png";
+import rings from "./public/rings.png";
+import skraldepose from "./public/skraldepose.png";
 ---
 
 <MainLayout title="Titel">
   <article>
     <!-- hero-->
-    <!-- sektion Hvad er plastikforurening -->
-    <!-- sektion Problemet med plastikforurening -->
-    <!-- sektion Hvad kan du gøre? -->
-    <!--  sektion Vores effekt -->
-
-    <!-- <Image src={thumbsup} alt="" /> -->
+    <section class="max-w-4xl mx-auto pt-[7rem] sm:pt-0">
+      <h1 class="sm:ml-6 lg:text-left text-7xl text-[#F5F5F5] lg:text-9xl lg:pt-[100px]">Slå op <br /> med plastik nu!</h1>
+      <h2 class="text-center text-3xl lg:text-5xl lg:text-right text-peach">#SingleUseSucks</h2>
+      <Button>STOP MED PLASTIKFORURENING NU!</Button>
+      <div class="relative h-screen">
+        <Image src={bjarne} alt="" class="absolute lg:top-[-488px] lg:left-[406px] lg:w-[380px] w-[180px] h-auto animate-float top-[-220px] left-[280px]" />
+        <Image src={rings} alt="" class="absolute lg:top-[-40px] lg:left-[620px] w-32 h-auto top-[-20px] left-[280px] animate-float" />
+        <Image src={skraldepose} alt="" class="absolute lg:top-[-60px] lg:left-[80px] w-40 h-auto animate-float top-[-20px] left-[40px]" />
+      </div>
+    </section>
+    <section class="" id="herovideo">
+      <video width="1200" height="960" autoplay muted loop>
+        <source src="hero.webm" type="video/webm" />
+      </video>
+    </section>
   </article>
+  <!-- sektion Hvad er plastikforurening -->
+  <!-- sektion Problemet med plastikforurening -->
+  <!-- sektion Hvad kan du gøre? -->
+  <!--  sektion Vores effekt -->
+
+  <!-- <Image src={thumbsup} alt="" /> -->
 </MainLayout>

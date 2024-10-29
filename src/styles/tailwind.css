@@ -7,7 +7,23 @@
     font-family: "MailRayStuff-Regular";
   }
   h2 {
-    font-family: "Trade Gothic LT";
+    font-family: "Trade Gothic LT Condensed";
+  }
+  /* sektion hero */
+  #herovideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Læg videoen bag menuen */
+  }
+
+  #herovideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -18,9 +34,16 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "Trade Gothic LT";
-  src: url("../Trade Gothic LT.ttf") format("ttf"), url("../Trade Gothic LT.ttf") format("ttf");
+  font-family: "Trade Gothic LT Bold ";
+  src: url("../Trade Gothic LT Bold Condensed No. 20.ttf") format("ttf"), url("Trade Gothic LT Bold Condensed No. 20.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Trade Gothic LT Condensed";
+  src: url("../Trade Gothic LT Condensed No. 18.ttf") format("ttf"), url("Trade Gothic LT Condensed No. 18.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
