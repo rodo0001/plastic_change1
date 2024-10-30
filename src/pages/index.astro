@@ -19,7 +19,7 @@ import incon_in from "./public/incon_in.png";
 import icon_x from "./public/icon_x.png";
 import icon_ig from "./public/icon_ig.png";
 ---
-
+<div class="progress-bar h-4 w-full bg-gradient-to-r from-[#ffd3cf] to-[#FF6F61] left-0 origin-top-left top-0 right-0"></div>
 <MainLayout title="Titel">
   <article class="">
     <!-- hero-->
@@ -34,18 +34,22 @@ import icon_ig from "./public/icon_ig.png";
           <Image src={skraldepose} alt="" class="absolute lg:top-[-60px] lg:left-[80px] w-40 h-auto animate-float top-[-20px] left-[40px]" />
         </div>
       </section>
-      <section class="fixed" id="herovideo">
-        <video width="1200" height="960" autoplay muted loop>
+      <section class="fixed  " id="herovideo">
+        <video width="1200" height="970" autoplay muted loop>
           <source src="hero.webm" type="video/webm" />
         </video>
       </section>
     </div>
 
     <!-- sektion Hvad er plastikforurening -->
-    
-    <div class="mt-[12rem]">
-      <section>
-        <h2 class="flex justify-center mb-10 text-6xl text-creme">1 Hvad er plastikforurening?</h2>
+
+
+
+     <section class=" bg-cover bg-center" style="background-image: url('./deepdown.webp'); background-attachment: fixed;">
+        <div class="">
+<h2 class=" flex justify-center mb-10 text-6xl text-creme">1 Hvad er plastikforurening?</h2>
+        </div>
+      
         <hr class="ml-8 mr-8" />
         <div>
           <p class="ml-8 mr-8 mt-10 mb-6 md:max-w-xl text-creme">Plastikforurening sker, når plastik ender i naturen og skader både dyr, mennesker og miljøet. Problemet opstår ofte, når plastikaffald ikke bliver smidt ud på den rigtige måde og derfor havner i havet, floder og søer.</p>
@@ -57,10 +61,9 @@ import icon_ig from "./public/icon_ig.png";
         <div class="ml-8 pt-6 md:w-9/12 md:flex md:justify-end md:ml-44 fotoinview">
           <Image src={graf} alt="graf" />
         </div>
-      </section>
-    </div>
-    <div class="progress-bar h-4 w-full bg-gradient-to-r from-[#ffd3cf] to-[#FF6F61] left-0 origin-top-left top-0 right-0"></div>
-
+      
+        </section>
+    
     <!-- sektion Problemet med plastikforurening -->
 
 
@@ -72,13 +75,32 @@ import icon_ig from "./public/icon_ig.png";
         </video>
       </section>
 
-      <!-- Indhold med parallax-effekt -->
+      <!-- H2 ovenpå video -->
       <div class="content-wrapper relative z-10 flex flex-col items-center justify-center h-full">
-        <section class="content parallaxelement">
+        <section class="">
           <h2 class="mb-10 text-6xl text-creme">2 Problemet med plastikforurening</h2>
         </section>
 
-        <section class="content parallaxelement">
+      </div>
+    </div>
+    <!-- content til sektion Problemet med plastikforurening-->
+
+     <section class="min-h-[350vh] bg-cover bg-center" style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
+          <div class="flex flex-col items-center space-y-20">
+            <div class="min-h-screen flex items-center">
+              <Boks>Plastikforurening er et kæmpe problem. Plastik hober sig op i naturen og skader både dyr og mennesker. Dyr kan dø, når de spiser eller bliver fanget i plastikaffald. Små stykker plastik, kaldet mikroplast, ender i vores mad og vand og kan gøre mennekser syge.</Boks>
+            </div>
+            <div class="min-h-screen flex items-center">
+              <Boks>Det værste er, at plastik næsten aldrig forsvinder – det kan ligge i naturen i hundreder af år. I havene bliver der dannet de her enorme plastiksupper, hvor plastik flyder sammen i gigantiske øer. Over tid nedbrydes det til mikroplast, som aldrig forsvinder og ender i vores mad og vand. Disse små plastpartikler forgifter både dyr og mennesker og bliver ved med at skade vores planet i generationer.</Boks>
+            </div>
+            <div class="min-h-screen flex items-center  md:w-1/2">
+               <Image src={figur_skrald} alt="graf" />
+            </div>
+            
+          </div>
+        </section>
+
+<!-- <section class="content parallaxelement">
           <div class="pt-6 md:w-1/2">
             <Image src={figur_skrald} alt="graf" />
           </div>
@@ -89,12 +111,13 @@ import icon_ig from "./public/icon_ig.png";
         </section>
         <section class="parallaxelement">
           <Boks>Det værste er, at plastik næsten aldrig forsvinder – det kan ligge i naturen i hundreder af år. I havene bliver der dannet de her enorme plastiksupper, hvor plastik flyder sammen i gigantiske øer. Over tid nedbrydes det til mikroplast, som aldrig forsvinder og ender i vores mad og vand. Disse små plastpartikler forgifter både dyr og mennesker og bliver ved med at skade vores planet i generationer.</Boks>
-        </section>
-      </div>
-    </div>
-
+        </section> -->
     
-    <div class=" bg-blue">
+
+    <!-- sektion Hvad kan du gøre? -->  
+    
+
+    <div class="min-h-[300vh] bg-cover bg-center" style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
       <section class="mb-[20vh]">
         <div>
  <h2 class="text-6xl text-center text-creme">3 Hvad kan du gøre?</h2>
@@ -103,20 +126,19 @@ import icon_ig from "./public/icon_ig.png";
 <p>Alle kan gøre noget, men ingen kan gøre alt. Det hele starter med DIG, de ændringer, du kan skabe i din hverdag, og hvordan du kan og har lyst til at støtte plastik-sagen. Du bliver helt automatisk en del af Plastic Changer bevægelsen</p>
        </div>
 
-
-        <!-- sektion Hvad kan du gøre? -->
+        <!-- horisontalscrollsection- hvad kan du gøre -->
       </section>
       <div class="overflow-clip">
         <h3 class="text-creme ml-8 mr-8 mt-10 mb-[3rem] md:max-w-xl">Dit bidrag som Plastic Changer kan være alt fra:</h3>
 <section id="horisontalscrollsection" class="h-[500vw]">
   <ul id="horisontalliste" class="list-none pl-0 flex items-center sticky top-[30vh] ">
-    <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3">
+    <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">
 1. Reducer plastikforbrug: undgå engangsplastik, som sugerør, plastikposer og vandflasker. Vælg genanvendelige alternativer som stofposer, metalflasker og genbrugelige bestik.
 .</figcaption></figure></li>
-			<li class="flex w-[100vw]  items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3">2. Sorter og genbrug plastik: Sorter dit affald korrekt, så plastikken kan blive genbrugt i stedet for at ende i naturen.</figcaption></figure></li>
-			<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3">3. Samle affald i naturen: Tag affaldsposer med, når du går tur, og saml plastik op, hvor du ser det. Hver lille indsats hjælper!</figcaption></figure></li>
-			<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3">4. Tænk over dine køb: Vælg produkter uden plastikemballage, og køb fra virksomheder, der arbejder for at reducere plastikforurening.</figcaption></figure></li>
-			<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3">5. Informer og del viden: Brug sociale medier eller dit faglige netværk til at dele information om plastikforurening og gode råd til at mindske problemet.</figcaption></figure></li>
+			<li class="flex w-[100vw]  items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">2. Sorter og genbrug plastik: Sorter dit affald korrekt, så plastikken kan blive genbrugt i stedet for at ende i naturen.</figcaption></figure></li>
+			<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">3. Samle affald i naturen: Tag affaldsposer med, når du går tur, og saml plastik op, hvor du ser det. Hver lille indsats hjælper!</figcaption></figure></li>
+			<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">4. Tænk over dine køb: Vælg produkter uden plastikemballage, og køb fra virksomheder, der arbejder for at reducere plastikforurening.</figcaption></figure></li>
+			<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">5. Informer og del viden: Brug sociale medier eller dit faglige netværk til at dele information om plastikforurening og gode råd til at mindske problemet.</figcaption></figure></li>
 		
   </ul>
 </section>
@@ -142,8 +164,56 @@ import icon_ig from "./public/icon_ig.png";
     </div>
 
     <!--  sektion Vores effekt -->
+    <div class="video-section h-screen" id="clearvideo-section">
+      <!-- Video som fast baggrund for denne sektion -->
+      <section class="video-background inset-0 z-[-100]">
+        <video class="w-full h-full object-cover" autoplay muted loop>
+          <source src="skrald.webm" type="video/webm" />
+        </video>
+      </section>
 
-    <div>
+      <!-- H2 ovenpå video -->
+      <div class="content-wrapper relative z-10 flex flex-col items-center justify-center h-full">
+        <section class="">
+          <h2 class="mb-10 text-6xl text-creme">4 Vores effekt</h2>
+        </section>
+
+      </div>
+    </div>
+     <section class="min-h-[350vh] bg-cover bg-center" style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
+          <div class="flex flex-col items-center space-y-20">
+            <div class="min-h-screen flex items-center">
+              <Boks>Vi fortæller om udfordringer ved plastik og plastikforureningens omfang, og konsekvenser for vores vand- og havmiljø.</Boks>
+            </div>
+            <div class="min-h-screen flex items-center">
+              <Boks>
+                Vi mobiliserer mennesker til at bidrage og engagere sig i kampen mod plastikspild. 
+              </Boks>
+            </div>
+            <div class="min-h-screen flex items-center">
+              <Boks>
+                Vi arbejder for at sætte udfordringerne med plastik på den politiske dagsorden og søger politisk indflydelse i Danmark, EU og globalt.
+              </Boks>
+            </div>
+            <div class="min-h-screen flex items-center">
+              <Boks>
+               Vi arbejder med innovative industriledere, produktdesignere og forskere, for at finde løsninger på plastikspild og  plastikforurening.
+              </Boks>
+            </div>    
+          </div>
+          <section>
+      <hr />
+      <div>
+        <h2 class="text-center lg:text-4xl text-creme p-6">Tilmeld dig vores nyhedsbrev</h2>
+        <div class="flex justify-center items-center">
+          <input class="text-center shadow appearance-none border rounded-[100px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Indtast mail" />
+        </div>
+        <Button>Tilmeld</Button>
+      </div>
+    </section>
+        </section>
+
+    <!-- <div>
       <section class="pt-[7rem]">
         <div class=" bg-blue">
       <section class="mb-[20vh]">
@@ -158,21 +228,10 @@ import icon_ig from "./public/icon_ig.png";
        </div>
 
       </section>
-    </div>
-
-
+    </div> -->
      <!--  nyhedsbrevt -->
 
-    <section>
-      <hr />
-      <div>
-        <h2 class="text-center lg:text-4xl text-creme p-6">Tilmeld dig vores nyhedsbrev</h2>
-        <div class="flex justify-center items-center">
-          <input class="text-center shadow appearance-none border rounded-[100px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Indtast mail" />
-        </div>
-        <Button>Tilmeld</Button>
-      </div>
-    </section>
+    
   </article>
 
   <script>
