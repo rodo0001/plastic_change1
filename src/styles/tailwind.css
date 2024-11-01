@@ -51,8 +51,11 @@
     opacity: 0; /* Start med at skjule indholdet */
     transform: translateY(50px); /* Startposition for parallax-effekten */
   }
+
+  body,
   a,
-  button {
+  button,
+  h2 {
     @apply cursor-handcursor;
   }
 

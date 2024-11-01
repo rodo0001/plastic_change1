@@ -1,14 +1,17 @@
 ---
 import Cta from "../components/Cta.astro";
 import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.png";
 
 ---
 
 <div x-data="{ showmenu: false }" class="text-white p-4 fixed lg:static w-full z-10">
   <div id="navbar" class="flex flex-row justify-between">
-    <div id="logo">
+    <div id="logo" class="hover:opacity-75 w-16 sm:w-20 md:w-24 lg:w-32 max-w-full">
       <a href="/">
-        <img src="/logo.png" alt="logo" class="hover:opacity-75 w-16 sm:w-20 md:w-24 lg:w-32 max-w-full" />
+       
+        <Image src={logo} alt="logo" /> 
       </a>
     </div>
     <nav id="desktopmenu" class="hidden lg:flex flex-1 justify-center">
