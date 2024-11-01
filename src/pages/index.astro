@@ -28,25 +28,29 @@ import skrald3 from "../assets/images/skrald3.png";
 import skrald4 from "../assets/images/skrald4.png";
 import skrald5 from "../assets/images/skrald5.png";
 import vandmand1 from "../assets/images/vandmand1.png";
-import vandmand2 from "../assets/images/vandmand2.png";
+import milk from "../assets/images/milk_plastic.png";
+import rings from "../assets/images/rings.png";
+
 ---
 
 <MainLayout title="Titel">
    <div class="" id="overlay"></div>
  
- 
+ <div>
+
+
       <section class="fixed" id="herovideo">
-        <video width="1200" height="auto" autoplay muted loop>
+        <video  width="1200" height="auto" autoplay muted loop>
           <source src="hero.webm" type="video/webm" />
         </video>
       </section>
 
 
-
+</div> 
  
     <!-- hero-->
     <div class="">
-      <section class="max-w-4xl mx-auto pt-[7rem] sm:pt-0 min-h-screen">
+      <section class="max-w-4xl mx-auto pt-[7rem] mb-0 sm:pt-0 min-h-screen">
       <div class="sm:ml-6 lg:text-left text-7xl text-creme lg:text-9xl lg:pt-[100px]">
         <div class="text" id="herotitle">
           <h1>Slå op <br /> med plastik nu!</h1>
@@ -57,18 +61,18 @@ import vandmand2 from "../assets/images/vandmand2.png";
   STOP MED PLASTIKFORURENING NU!
 </Button>
       <div class="relative">
-        <Image src={bjarne} alt="" class="absolute lg:top-[-488px] lg:left-[406px] lg:w-[380px] w-[180px] h-auto animate-float top-[-320px] left-[280px]" />
-        <Image src={rings} alt="" class="absolute lg:top-[-115px] lg:left-[620px] w-32 h-auto top-[-20px] left-[280px] animate-float" />
-        <Image src={skraldepose} alt="" class="absolute lg:top-[-120px] lg:left-[80px] w-40 h-auto animate-float top-[-20px] left-[40px]" />
-      </div>
+        <Image src={bjarne} alt="" class="absolute lg:top-[-488px] lg:left-[406px] lg:w-[380px] w-[180px] h-auto float top-[-320px] left-[280px]" />
+       
+        <Image src={skraldepose} alt="" class="absolute lg:top-[-120px] lg:left-[80px] w-40 h-auto float top-[-20px] left-[40px]" />
+      </div> 
     </section>
-     
+      </div>
   
-    </div>
+    
 
     <!-- sektion Hvad er plastikforurening -->
 
-     <section id="Hvaderplastikforurening"class=" bg-cover bg-center " style="background-image: url('./src/assets/images/deepdown2.webp'); background-attachment: fixed;">
+     <section id="Hvaderplastikforurening"class=" bg-cover bg-center mt-0 pt-0" style="background-image: url('./src/assets/images/deepdown2.webp'); background-attachment: fixed;">
       
       <div class="flex items-center justify-center mb-10 gap-4 pt-14">
      <h2 class="text-4xl items-center md:text-9xl stroke-text">1</h2>
@@ -105,7 +109,7 @@ import vandmand2 from "../assets/images/vandmand2.png";
  
 
 
-        <div>
+        <div class="">
           <Image src={havet} alt="havet figur" />
         </div>
 
@@ -125,36 +129,38 @@ import vandmand2 from "../assets/images/vandmand2.png";
 
       <!-- H2 ovenpå video -->
       <div class="content-wrapper relative z-10 flex flex-col items-center justify-center h-full">
-        <section class="">
-     <div class="flex items-center justify-center mb-10 pt-28 gap-4">
-     <h2 class="text-4xl items-end md:text-9xl stroke-text">2</h2>
-  <h2 class="text-2xl md:text-7xl text-creme">Problemet med 
-plastikforurening</h2>
+  <section>
+    <div class="flex items-center justify-center mb-10 pt-28 gap-4 relative">
+      <h2 class="text-4xl md:text-9xl stroke-text">2</h2>
+      <h2 class="text-2xl md:text-7xl text-creme">Problemet med plastikforurening</h2>
+      <div class="absolute right-0 -mr-20 "> <!-- Justér marginen for at flytte billedet bagved -->
+        <Image src={milk} alt="milk" class="opacity-50 float" /> <!-- Tilføj opacity for at gøre det lidt gennemsigtigt -->
       </div>
-        </section>
+    </div>
+  </section>
+</div>
 
-      </div>
     </div>
     <!-- content til sektion Problemet med plastikforurening-->
 
-     <section class="min-h-[350vh] bg-cover bg-center" style="background-image: url('./src/assets/images/deepdown2.webp'); background-attachment: fixed;">
-       <section class="relative">
-  <div class="w-20 sticky right-4 top-1/3 md:right-4 md:top-1/3 lg:w-2/12 md:pl-6 md:sticky">
-    <Image src={mikroplast} alt="gif" />
-  </div>
+<section class="min-h-[350vh] bg-cover bg-center" style="background-image: url('./src/assets/images/deepdown2.webp'); background-attachment: fixed;">
+  <section class="relative">
+    <!-- Juster positionen til højre side -->
+    <div class="w-20 sticky right-4 top-1/3 md:right-4 md:top-1/3 lg:w-2/12 md:pl-6 md:sticky">
+      <Image src={mikroplast} alt="gif" />
+    </div>
   
-  <div class="md:flex md:flex-col md:items-center md:space-y-20">
-    <div class="min-h-screen flex items-center text-creme">
-      <Boks>Plastikforurening er et kæmpe problem. Plastik hober sig op i naturen og skader både dyr og mennesker. Dyr kan dø, når de spiser eller bliver fanget i plastikaffald. Små stykker plastik, kaldet mikroplast, ender i vores mad og vand og kan gøre mennesker syge.</Boks>
+    <div class="md:flex md:flex-col md:items-center md:space-y-20">
+      <div class="min-h-screen flex items-center text-creme">
+        <Boks>Plastikforurening er et kæmpe problem. Plastik hober sig op i naturen og skader både dyr og mennesker. Dyr kan dø, når de spiser eller bliver fanget i plastikaffald. Små stykker plastik, kaldet mikroplast, ender i vores mad og vand og kan gøre mennesker syge.</Boks>
+      </div>
+      
+      <div class="min-h-screen flex items-center text-creme pb-64">
+        <Boks>Det værste er, at plastik næsten aldrig forsvinder – det kan ligge i naturen i hundreder af år. I havene bliver der dannet enorme plastiksupper, hvor plastik flyder sammen i gigantiske øer. Over tid nedbrydes det til mikroplast, som aldrig forsvinder og ender i vores mad og vand. Disse små plastpartikler forgifter både dyr og mennesker og bliver ved med at skade vores planet i generationer.</Boks>
+      </div>
     </div>
-    
-    <div class="min-h-screen flex items-center text-creme pb-64">
-      <Boks>Det værste er, at plastik næsten aldrig forsvinder – det kan ligge i naturen i hundreder af år. I havene bliver der dannet enorme plastiksupper, hvor plastik flyder sammen i gigantiske øer. Over tid nedbrydes det til mikroplast, som aldrig forsvinder og ender i vores mad og vand. Disse små plastpartikler forgifter både dyr og mennesker og bliver ved med at skade vores planet i generationer.</Boks>
-    </div>
-  </div>
-</section>
-        
-  <section class=" pt-20 md:pt-64">
+  </section>
+   <section class=" pt-20 md:pt-64">
     <div class="md:flex text-creme ">
       <div class="ml-8 mr-8 mt-10 mb-6 md:max-w-xl ">
         <hr class="md:max-w-xl pb-4">
@@ -171,13 +177,7 @@ Så mange år tager det for blot et par plastikgenstande at nedbrydes til mikrop
           </div>
 
     </div>
-
-  </section>
-
-       
-            
-
-         <div class="text-white md:w-2/3 grid grid-cols-1 lg:grid-cols-3 gap-8 pt-4 md:pt-12 pb-96 max-w-4xl mx-auto fotoinview md:mt-28">
+     <div class="text-white md:w-2/3 grid grid-cols-1 lg:grid-cols-3 gap-8 pt-4 md:pt-12 pb-96 max-w-4xl mx-auto fotoinview md:mt-28">
       <div class="relative p-6">
         <h2 class="text-xl">Langsom nedbrydning</h2>
         <h2 class="text-[#FF6F61]">01</h2>
@@ -201,10 +201,10 @@ Så mange år tager det for blot et par plastikgenstande at nedbrydes til mikrop
         <div class="w-full h-[2px] bg-white mt-4 md:mt-0 md:w-[2px]"></div>
       </div>
     </div>
-        </section>
 
-
-
+  </section>
+</section>
+        
 
     <!-- sektion Hvad kan du gøre? -->  
     
@@ -216,17 +216,23 @@ Så mange år tager det for blot et par plastikgenstande at nedbrydes til mikrop
         </video>
       </section>
 
-      <!-- H2 ovenpå video -->
-      <div id="Hvadkandugøre" class="content-wrapper relative z-10 flex flex-col items-center justify-center h-full">
-        <section class="">
-        <div class="flex items-center justify-center mb-10 pt-28 gap-4">
-     <h2 class="text-2xl items-end md:text-9xl stroke-text">3</h2>
-  <h2 class="text-2xl md:text-7xl text-creme">Hvad kan du gøre?</h2>
-      </div>
-        </section>
 
+         <!-- H2 ovenpå video -->
+      <div class="content-wrapper relative z-10 flex flex-col items-center justify-center h-full">
+  <section>
+    <div class="flex items-center justify-center mb-10 pt-28 gap-4 relative">
+      <h2 class="text-4xl md:text-9xl stroke-text">3</h2>
+      <h2 class="text-2xl md:text-7xl text-creme">Hvad kan du gøre?</h2>
+      <div class="absolute md:right-0 md:-mr-40 md:w-72"> <!-- Justér marginen for at flytte billedet bagved -->
+        <Image src={rings} alt="ring" class="opacity-50 float" /> <!-- Tilføj opacity for at gøre det lidt gennemsigtigt -->
       </div>
     </div>
+  </section>
+</div>
+</div>
+
+
+    
 
     <div class="min-h-[300vh] bg-cover bg-center" style="background-image: url('./src/assets/images/deepdown2.webp'); background-attachment: fixed;">
       <section class="mb-[20vh] flex justify-center">
@@ -296,34 +302,6 @@ Så mange år tager det for blot et par plastikgenstande at nedbrydes til mikrop
     </div>
 
 
-<!-- <section class="min-h-[350vh] bg-cover bg-center" style="background-image: url('./src/assets/images/deepdown2.webp); background-attachment: fixed;">>
-<div class="relative">      
-      <div class="w-64 sticky right-4 top-1/3 md:right-4 md:top-1/3 lg:w-2/12 md:pl-6 md:sticky">
-      <Image src={vandmand1} alt="vandmand" />
-      </div>
-      
-          <div class="flex flex-col items-center space-y-20">
-            <div class="min-h-screen flex items-center  text-creme">
-              <Boks>Vi fortæller om udfordringer ved plastik og plastikforureningens omfang, og konsekvenser for vores vand- og havmiljø.</Boks>
-            </div>
-            <div class="min-h-screen flex items-center text-creme">
-              <Boks>
-                Vi mobiliserer mennesker til at bidrage og engagere sig i kampen mod plastikspild. 
-              </Boks>
-            </div>
-            <div class="min-h-screen flex items-center  text-creme">
-              <Boks>
-                Vi arbejder for at sætte udfordringerne med plastik på den politiske dagsorden og søger politisk indflydelse i Danmark, EU og globalt.
-              </Boks>
-            </div>
-            <div class="min-h-screen flex items-center  text-creme">
-              <Boks>
-               Vi arbejder med innovative industriledere, produktdesignere og forskere, for at finde løsninger på plastikspild og  plastikforurening.
-              </Boks>
-            </div>    
-          </div>
-        </div>
-</section> -->
 
 <section class="min-h-[350vh] bg-cover bg-center" style="background-image: url('./src/assets/images/deepdown2.webp'); background-attachment: fixed;">
     <div class="relative">      
