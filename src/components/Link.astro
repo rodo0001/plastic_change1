@@ -1,5 +1,21 @@
 ---
 // Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+const { variant = "primary", size = "medium", href="#", target="_self"} = Astro.props; 
+
+const buttonStyling = "text-white";
+
+const variantClasses = {
+  primary: " bg-peach rounded-md",
+  secondary: "",
+};
+
+const sizeClasses = {
+  large: "px-8 py-2 text-xl",
+  medium: "px-6 py-1 text-lg",
+  small: "px-2 py-0.5 text-sm",
+  };
+
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+
+<a href={href}  class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]} target={target}><slot /></a>
+

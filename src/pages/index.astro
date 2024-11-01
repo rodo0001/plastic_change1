@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
 import Button from "../components/Button.astro";
 import Boks from "../components/Boks.astro";
 import Cta from "../components/Cta.astro";
@@ -18,56 +19,95 @@ import icon_fb from "./public/icon_fb.png";
 import incon_in from "./public/incon_in.png";
 import icon_x from "./public/icon_x.png";
 import icon_ig from "./public/icon_ig.png";
+import flaske from "./public/flaske.png";
+import mikroplast from "./public/mikroplast.gif";
+import skrald1 from "./public/skrald1.png";
+import skrald2 from "./public/skrald2.png";
+import skrald3 from "./public/skrald3.png";
+import skrald4 from "./public/skrald4.png";
+import skrald5 from "./public/skrald5.png";
 ---
-<div class="progress-bar h-4 w-full bg-gradient-to-r from-[#ffd3cf] to-[#FF6F61] left-0 origin-top-left top-0 right-0"></div>
+
 <MainLayout title="Titel">
-  <article class="">
-    <!-- hero-->
-    <div class="">
-      <section class="max-w-4xl mx-auto pt-[7rem] sm:pt-0">
-        <h1 class="sm:ml-6 lg:text-left text-7xl text-creme lg:text-9xl lg:pt-[100px]">Slå op <br /> med plastik nu!</h1>
-        <h2 class="text-center text-3xl lg:text-5xl lg:text-right text-peach">#SingleUseSucks</h2>
-        <Button>STOP MED PLASTIKFORURENING NU!</Button>
-        <div class="relative">
-          <Image src={bjarne} alt="" class="absolute lg:top-[-488px] lg:left-[406px] lg:w-[380px] w-[180px] h-auto animate-float top-[-220px] left-[280px]" />
-          <Image src={rings} alt="" class="absolute lg:top-[-40px] lg:left-[620px] w-32 h-auto top-[-20px] left-[280px] animate-float" />
-          <Image src={skraldepose} alt="" class="absolute lg:top-[-60px] lg:left-[80px] w-40 h-auto animate-float top-[-20px] left-[40px]" />
-        </div>
-      </section>
-      <section class="fixed  " id="herovideo">
-        <video width="1200" height="970" autoplay muted loop>
+   <div class="" id="overlay"></div>
+  <article class="cursor default-handcursor">
+
+      <section class="fixed" id="herovideo">
+        <video width="1200" height="auto" autoplay muted loop>
           <source src="hero.webm" type="video/webm" />
         </video>
       </section>
+
+
+
+ 
+    <!-- hero-->
+    <div class="">
+      <section class="max-w-4xl mx-auto pt-[7rem] sm:pt-0 min-h-screen">
+      <div class="sm:ml-6 lg:text-left text-7xl text-creme lg:text-9xl lg:pt-[100px]">
+        <div class="text" id="herotitle">
+          <h1>Slå op <br /> med plastik nu!</h1>
+        </div>
+      </div>
+      <h2 class="text-center text-3xl lg:text-5xl lg:text-right text-peach">#SingleUseSucks</h2>
+      <Button  variant="primary" size="medium" href="#form">
+  STOP MED PLASTIKFORURENING NU!
+</Button>
+      <div class="relative">
+        <Image src={bjarne} alt="" class="absolute lg:top-[-488px] lg:left-[406px] lg:w-[380px] w-[180px] h-auto animate-float top-[-220px] left-[280px]" />
+        <Image src={rings} alt="" class="absolute lg:top-[-115px] lg:left-[620px] w-32 h-auto top-[-20px] left-[280px] animate-float" />
+        <Image src={skraldepose} alt="" class="absolute lg:top-[-120px] lg:left-[80px] w-40 h-auto animate-float top-[-20px] left-[40px]" />
+      </div>
+    </section>
+     
+  
     </div>
 
     <!-- sektion Hvad er plastikforurening -->
 
-
-
-     <section class=" bg-cover bg-center" style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
-        <div class="">
-<h2 class=" flex justify-center mb-10 text-6xl text-creme">1 Hvad er plastikforurening?</h2>
-        </div>
+     <section id="Hvaderplastikforurening"class=" bg-cover bg-center " style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
+      <div class="flex items-end justify-center mb-10 gap-4 pt-14">
+     <h2 class="text-2xl items-end md:text-9xl stroke-text">1</h2>
+         
+  <h2 class="text-2xl md:text-7xl mb-12 text-creme"> Hvad er plastikforurening?</h2>
+      </div>
       
-        <hr class="ml-8 mr-8" />
+
+    
+        <hr class="ml-8 mr-8 md:max-w-xl" />
         <div>
-          <p class="ml-8 mr-8 mt-10 mb-6 md:max-w-xl text-creme">Plastikforurening sker, når plastik ender i naturen og skader både dyr, mennesker og miljøet. Problemet opstår ofte, når plastikaffald ikke bliver smidt ud på den rigtige måde og derfor havner i havet, floder og søer.</p>
+          <h3 class="ml-8 mr-8 mt-10  md:max-w-xl text-creme">Havets helbred er også vores </h3>
+          <p class="ml-8 mr-8 pt-4 mb-6 md:max-w-xl text-creme">Plastikforurening sker, når plastik ender i naturen og skader både dyr, mennesker og miljøet. Problemet opstår ofte, når plastikaffald ikke bliver smidt ud på den rigtige måde og derfor havner i havet, floder og søer.</p>
         </div>
+
+
+
+        <div class="flex justify-center mt-56 mb-48">
+  <div class=" pt-6 md:w-2/3 md:flex  md:ml-44 fotoinview mb-36">
+          <Image src={graf} alt="graf" />
+          </div>
+          <div class="ml-8 mr-8 mt-10 mb-6 md:max-w-xl ">
+          <hr class=" mr-8 md:max-w-xl" />
+          <h3 class="text-creme pt-10">Er vi klar til at tage ansvar for vres efterladte spor? </h3>
+          <p class="text-creme pt-4 ">Grafen viser Danmark der fører klart i affald per person: Med 777 kg affald per person om året smider Danmark mere end 3 gange så meget affald som Indonesien (255 kg) og over 60 % mere end gennemsnittet i EU (480 kg). Den enorme mængde affald, vi genererer, sætter os langt i front - men ikke i en god forstand. </p>
+        </div>     
+ </div>
+
+
+ 
+
+
         <div>
           <Image src={havet} alt="havet figur" />
         </div>
 
-        <div class="ml-8 pt-6 md:w-9/12 md:flex md:justify-end md:ml-44 fotoinview">
-          <Image src={graf} alt="graf" />
-        </div>
+      
       
         </section>
     
     <!-- sektion Problemet med plastikforurening -->
 
-
-    <div class="video-section h-screen" id="clearvideo-section">
+    <div id="Problemetmedplastikforurening"class="video-section h-screen" id="clearvideo-section">
       <!-- Video som fast baggrund for denne sektion -->
       <section class="video-background inset-0 z-[-100]">
         <video class="w-full h-full object-cover" autoplay muted loop>
@@ -78,7 +118,11 @@ import icon_ig from "./public/icon_ig.png";
       <!-- H2 ovenpå video -->
       <div class="content-wrapper relative z-10 flex flex-col items-center justify-center h-full">
         <section class="">
-          <h2 class="mb-10 text-6xl text-creme">2 Problemet med plastikforurening</h2>
+     <div class="flex items-center justify-center mb-10 pt-28 gap-4">
+     <h2 class="text-2xl items-end md:text-9xl stroke-text">2</h2>
+  <h2 class="text-2xl md:text-7xl text-creme">Problemet med 
+plastikforurening</h2>
+      </div>
         </section>
 
       </div>
@@ -86,70 +130,129 @@ import icon_ig from "./public/icon_ig.png";
     <!-- content til sektion Problemet med plastikforurening-->
 
      <section class="min-h-[350vh] bg-cover bg-center" style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
-          <div class="flex flex-col items-center space-y-20">
-            <div class="min-h-screen flex items-center">
-              <Boks>Plastikforurening er et kæmpe problem. Plastik hober sig op i naturen og skader både dyr og mennesker. Dyr kan dø, når de spiser eller bliver fanget i plastikaffald. Små stykker plastik, kaldet mikroplast, ender i vores mad og vand og kan gøre mennekser syge.</Boks>
-            </div>
-            <div class="min-h-screen flex items-center">
-              <Boks>Det værste er, at plastik næsten aldrig forsvinder – det kan ligge i naturen i hundreder af år. I havene bliver der dannet de her enorme plastiksupper, hvor plastik flyder sammen i gigantiske øer. Over tid nedbrydes det til mikroplast, som aldrig forsvinder og ender i vores mad og vand. Disse små plastpartikler forgifter både dyr og mennesker og bliver ved med at skade vores planet i generationer.</Boks>
-            </div>
-            <div class="min-h-screen flex items-center  md:w-1/2">
-               <Image src={figur_skrald} alt="graf" />
-            </div>
-            
-          </div>
-        </section>
-
-<!-- <section class="content parallaxelement">
-          <div class="pt-6 md:w-1/2">
-            <Image src={figur_skrald} alt="graf" />
-          </div>
-        </section>
-
-        <section class="parallaxelement">
-          <Boks>Plastikforurening er et kæmpe problem. Plastik hober sig op i naturen og skader både dyr og mennesker. Dyr kan dø, når de spiser eller bliver fanget i plastikaffald. Små stykker plastik, kaldet mikroplast, ender i vores mad og vand og kan gøre mennekser syge.</Boks>
-        </section>
-        <section class="parallaxelement">
-          <Boks>Det værste er, at plastik næsten aldrig forsvinder – det kan ligge i naturen i hundreder af år. I havene bliver der dannet de her enorme plastiksupper, hvor plastik flyder sammen i gigantiske øer. Over tid nedbrydes det til mikroplast, som aldrig forsvinder og ender i vores mad og vand. Disse små plastpartikler forgifter både dyr og mennesker og bliver ved med at skade vores planet i generationer.</Boks>
-        </section> -->
+       <section class="relative">
+  <div class="absolute right-4 top-1/3 lg:w-2/12 pl-6 sticky">
+    <Image src={mikroplast} alt="gif" />
+  </div>
+  
+  <div class="flex flex-col items-center space-y-20">
+    <div class="min-h-screen flex items-center text-creme">
+      <Boks>Plastikforurening er et kæmpe problem. Plastik hober sig op i naturen og skader både dyr og mennesker. Dyr kan dø, når de spiser eller bliver fanget i plastikaffald. Små stykker plastik, kaldet mikroplast, ender i vores mad og vand og kan gøre mennesker syge.</Boks>
+    </div>
     
+    <div class="min-h-screen flex items-center text-creme pb-64">
+      <Boks>Det værste er, at plastik næsten aldrig forsvinder – det kan ligge i naturen i hundreder af år. I havene bliver der dannet enorme plastiksupper, hvor plastik flyder sammen i gigantiske øer. Over tid nedbrydes det til mikroplast, som aldrig forsvinder og ender i vores mad og vand. Disse små plastpartikler forgifter både dyr og mennesker og bliver ved med at skade vores planet i generationer.</Boks>
+    </div>
+  </div>
+</section>
+        
+  <section class="pt-64">
+    <div class="flex text-creme ">
+      <div class="ml-8 mr-8 mt-10 mb-6 md:max-w-xl ">
+        <hr class="md:max-w-xl pb-4">
+<h3>
+  Hvor meget plastik vil der være tilbage til fremtidige generationer?
+</h3>
+      <p>
+Så mange år tager det for blot et par plastikgenstande at nedbrydes til mikroplast, og i al den tid hober de sig kun op i vores have og skaber langsigtede problemer for både dyreliv og økosystemer.
+      </p>
+      </div>
+
+           <div class="scrollzoom overflow-clip min-h-screen flex items-center  md:w-1/2 inviewreturn pb-64">     <Image src={figur_skrald} alt="graf" />
+            </div>
+          </div>
+
+    </div>
+
+  </section>
+
+       
+            
+
+         <div class="text-white md:w-2/3 grid grid-cols-1 lg:grid-cols-3 gap-8 pt-12 pb-96 max-w-4xl mx-auto fotoinview md:mt-28">
+      <div class="relative p-6">
+        <h2 class="text-xl">Langsom nedbrydning</h2>
+        <h2 class="text-[#FF6F61]">01</h2>
+        <p>Plastik tager hundreder af år at nedbrydes og ophobes i naturen over tid.</p>
+
+        <div class="md:absolute md:right-0 md:top-0 md:h-full md:bg-white w-full h-[2px] bg-white mt-4 md:mt-0 md:w-[2px]"></div>
+      </div>
+
+      <div class="relative p-6">
+        <h2 class="text-xl">Skadeligt for dyrelivet</h2>
+        <h2 class="text-[#FF6F61]">02</h2>
+        <p>Dyr risikerer at blive kvalt eller forgiftet af plastik, mens mennesker påvirkes via fødekæden.</p>
+
+        <div class="md:absolute md:right-0 md:top-0 md:h-full  md:bg-white w-full h-[2px] bg-white mt-4 md:mt-0 md:w-[2px]"></div>
+      </div>
+
+      <div class="relative p-6">
+        <h2 class="text-xl">Mikroplast i alt</h2>
+        <h2 class="text-[#FF6F61]">03</h2>
+        <p>Små plastpartikler kan ende i vores mad, vand og luft og påvirke vores helbred.</p>
+        <div class="w-full h-[2px] bg-white mt-4 md:mt-0 md:w-[2px]"></div>
+      </div>
+    </div>
+        </section>
+
+
+
 
     <!-- sektion Hvad kan du gøre? -->  
     
+  <div class="video-section h-screen" id="clearvideo-section">
+      <!-- Video som fast baggrund for denne sektion -->
+      <section class="video-background inset-0 z-[-100]">
+        <video class="w-full h-full object-cover" autoplay muted loop>
+          <source src="clearwater.webm" type="video/webm" />
+        </video>
+      </section>
+
+      <!-- H2 ovenpå video -->
+      <div id="Hvadkandugøre" class="content-wrapper relative z-10 flex flex-col items-center justify-center h-full">
+        <section class="">
+        <div class="flex items-center justify-center mb-10 pt-28 gap-4">
+     <h2 class="text-2xl items-end md:text-9xl stroke-text">3</h2>
+  <h2 class="text-2xl md:text-7xl text-creme">Hvad kan du gøre?</h2>
+      </div>
+        </section>
+
+      </div>
+    </div>
 
     <div class="min-h-[300vh] bg-cover bg-center" style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
-      <section class="mb-[20vh]">
-        <div>
- <h2 class="text-6xl text-center text-creme">3 Hvad kan du gøre?</h2>
-        </div>
-       <div class="ml-8 mr-8 mt-10 mb-6 md:max-w-xl text-creme">
+      <section class="mb-[20vh] flex justify-center">
+     
+       <div class=" ml-8 mr-8 pt-10 mb-6 md:max-w-xl text-creme">
+        <p class="text-xl pb-5 text-peach">Hvad kan du gøre?</p>
 <p>Alle kan gøre noget, men ingen kan gøre alt. Det hele starter med DIG, de ændringer, du kan skabe i din hverdag, og hvordan du kan og har lyst til at støtte plastik-sagen. Du bliver helt automatisk en del af Plastic Changer bevægelsen</p>
-       </div>
+        <h3 class="text-creme mr-8 mt-10 mb-[3rem] md:max-w-xl">Dit bidrag som Plastic Changer kan være alt fra:</h3>      
+</div>
 
         <!-- horisontalscrollsection- hvad kan du gøre -->
       </section>
       <div class="overflow-clip">
-        <h3 class="text-creme ml-8 mr-8 mt-10 mb-[3rem] md:max-w-xl">Dit bidrag som Plastic Changer kan være alt fra:</h3>
-<section id="horisontalscrollsection" class="h-[500vw]">
+
+<section id="horisontalscrollsection" class="h-[500vw] flex flex-col pb-12">
   <ul id="horisontalliste" class="list-none pl-0 flex items-center sticky top-[30vh] ">
-    <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">
-1. Reducer plastikforbrug: undgå engangsplastik, som sugerør, plastikposer og vandflasker. Vælg genanvendelige alternativer som stofposer, metalflasker og genbrugelige bestik.
+    <li class="flex w-[100vw] items-center justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={skrald1} class="w-1/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">
+<span class="text-peach">1.</span> Reducer plastikforbrug: undgå engangsplastik, som sugerør, plastikposer og vandflasker. Vælg genanvendelige alternativer som stofposer, metalflasker og genbrugelige bestik.
 .</figcaption></figure></li>
-			<li class="flex w-[100vw]  items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">2. Sorter og genbrug plastik: Sorter dit affald korrekt, så plastikken kan blive genbrugt i stedet for at ende i naturen.</figcaption></figure></li>
-			<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">3. Samle affald i naturen: Tag affaldsposer med, når du går tur, og saml plastik op, hvor du ser det. Hver lille indsats hjælper!</figcaption></figure></li>
-			<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">4. Tænk over dine køb: Vælg produkter uden plastikemballage, og køb fra virksomheder, der arbejder for at reducere plastikforurening.</figcaption></figure></li>
-			<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={bjarne} class="w-2/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme">5. Informer og del viden: Brug sociale medier eller dit faglige netværk til at dele information om plastikforurening og gode råd til at mindske problemet.</figcaption></figure></li>
-		
+			<li class="flex w-[100vw]   overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={skrald2} class="w-1/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme"> <span class="text-peach">2.</span> Sorter og genbrug plastik: Sorter dit affald korrekt, så plastikken kan blive genbrugt i stedet for at ende i naturen.</figcaption></figure></li>
+			<li class="flex w-[100vw]   overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={skrald3} class="w-1/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme"><span class="text-peach">3.</span> Samle affald i naturen: Tag affaldsposer med, når du går tur, og saml plastik op, hvor du ser det. Hver lille indsats hjælper!</figcaption></figure></li>
+			<li class="flex w-[100vw]   overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={skrald4} class="w-1/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme"><span class="text-peach">4.</span> Tænk over dine køb: Vælg produkter uden plastikemballage, og køb fra virksomheder, der arbejder for at reducere plastikforurening.</figcaption></figure></li>
+			<li class="flex w-[100vw]   overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Image src={skrald5} class="w-1/3" alt="foto" /><figcaption class="pl-4 italic w-1/3 text-creme"><span class="text-peach">5.</span> Informer og del viden: Brug sociale medier eller dit faglige netværk til at dele information om plastikforurening og gode råd til at mindske problemet.</figcaption></figure></li>
   </ul>
 </section>
-<section class="flex flex-col items-center top-6 ">
+
+<section class="flex flex-col items-center pt-64 pb-64 ">
   
-    <h3 class=" text-creme">
+    <h3 class=" text-3xl text-creme">
       Vær med til at sprede vores budskab på de sociale medier ved at bruge vores hashtag
     </h3>
 
-  <div class="flex items-center gap-4 ">
-    <h3 class="text-peach flex items-end">#SingleUseSucks</h3>
+  <div class=" gap-4 ">
+    <h3 class="text-peach text-3xl pb-4 pt-4 ">#SingleUseSucks</h3>
       <div class="flex gap-4 h-5 w-5 mt-4 md:w-10 md:h-10">
         <Image src={incon_in} alt="footerbillede" />
         <Image src={incon_yt} alt="footerbillede" />
@@ -164,7 +267,7 @@ import icon_ig from "./public/icon_ig.png";
     </div>
 
     <!--  sektion Vores effekt -->
-    <div class="video-section h-screen" id="clearvideo-section">
+    <div class="video-section h-screen" id="Voreseffekt">
       <!-- Video som fast baggrund for denne sektion -->
       <section class="video-background inset-0 z-[-100]">
         <video class="w-full h-full object-cover" autoplay muted loop>
@@ -175,81 +278,188 @@ import icon_ig from "./public/icon_ig.png";
       <!-- H2 ovenpå video -->
       <div class="content-wrapper relative z-10 flex flex-col items-center justify-center h-full">
         <section class="">
-          <h2 class="mb-10 text-6xl text-creme">4 Vores effekt</h2>
+      <div class="flex items-center justify-center mb-10 pt-28 gap-4">
+       <h2 class="text-2xl items-end md:text-9xl stroke-text">4</h2>
+  <h2 class="text-2xl md:text-7xl text-creme">Vores effekt</h2>
+      </div>
         </section>
 
       </div>
     </div>
      <section class="min-h-[350vh] bg-cover bg-center" style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
           <div class="flex flex-col items-center space-y-20">
-            <div class="min-h-screen flex items-center">
+            <div class="min-h-screen flex items-center  text-creme">
               <Boks>Vi fortæller om udfordringer ved plastik og plastikforureningens omfang, og konsekvenser for vores vand- og havmiljø.</Boks>
             </div>
-            <div class="min-h-screen flex items-center">
+            <div class="min-h-screen flex items-center text-creme">
               <Boks>
                 Vi mobiliserer mennesker til at bidrage og engagere sig i kampen mod plastikspild. 
               </Boks>
             </div>
-            <div class="min-h-screen flex items-center">
+            <div class="min-h-screen flex items-center  text-creme">
               <Boks>
                 Vi arbejder for at sætte udfordringerne med plastik på den politiske dagsorden og søger politisk indflydelse i Danmark, EU og globalt.
               </Boks>
             </div>
-            <div class="min-h-screen flex items-center">
+            <div class="min-h-screen flex items-center  text-creme">
               <Boks>
                Vi arbejder med innovative industriledere, produktdesignere og forskere, for at finde løsninger på plastikspild og  plastikforurening.
               </Boks>
             </div>    
           </div>
           <section>
+
+                <hr />
+<section id="form" class="max-w-4xl mx-auto pb-32 pt-32">
+  
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6">
+        <div>
+          <h1 class="lg:text-left text-5xl text-[#F5F5F5]">Beskyt vores verden mod plastikforurening nu!</h1>
+          <h2 class="text-3xl lg:text-5xl text-[#FF6F61]">#SingleUseSucks</h2>
+        </div>
+
+        <div class="relative border-corner max-w-[400px]">
+          <!-- Boksen indhold -->
+          <!-- <p class="text-gray-800">Dette er indholdet i boksen.</p> -->
+          <div class="w-full max-w mx-auto">
+            <form class="bg-transparent shadow-md rounded px-8 pt-6 pb-8">
+              <h2 class="text-[#F5F5F5] pb-4">STØT OS HER</h2>
+
+              <label class="md:w-2/3 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <input class="mr-2 leading-tight checked:bg-[#FF6F61] hover:bg-[#FF6F61]" type="checkbox" />
+                  <span class="text-sm text-[#F5F5F5]">Engang</span>
+                </div>
+                <div>
+                  <input class="mr-2 leading-tight checked:bg-[#FF6F61] hover:bg-[#FF6F61]" type="checkbox" />
+                  <span class="text-sm text-[#F5F5F5]">Månedligt</span>
+                </div>
+              </label>
+
+              <!-- Cirkler -->
+              <div class="flex space-x-8 p-4">
+                <div class="w-16 h-16 lg:w-20 lg:h-20 bg-white rounded-full flex items-center justify-center text-grey cursor-pointer transition-colors duration-300">50,-</div>
+                <div class="w-16 h-16 lg:w-20 lg:h-20 bg-white rounded-full flex items-center justify-center text-grey cursor-pointer transition-colors duration-300">75,-</div>
+                <div class="w-16 h-16 lg:w-20 lg:h-20 bg-white rounded-full flex items-center justify-center text-grey cursor-pointer transition-colors duration-300">125,-</div>
+              </div>
+
+              <div class="mb-4">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Andet beløb.." />
+              </div>
+
+              <div class="flex justify-center items-center">
+                <button class="bg-[#FF6F61] hover:bg-[#D05C50] text-white p-4 rounded-[10px] focus:outline-none focus:shadow-outline" type="button">Støt nu!</button>
+              </div>
+            </form>
+          </div>
+          <!-- Custom CSS til at skabe hjørnebordere -->
+          <style>
+            .border-corner {
+              position: relative;
+            }
+ .bg-transparent {
+      background-color: #f5f5f531; /* Juster alpha-værdien for at ændre gennemsigtigheden */
+    }
+            /* Øverste venstre hjørne - vandret linje */
+            .border-corner::before {
+              content: "";
+              position: absolute;
+              top: -15px; /* 15px udenfor boksen */
+              left: -15px; /* 15px udenfor boksen */
+              width: 120px; /* Juster længden */
+              height: 1px; /* Tykkelse af linjen */
+              background-color: white;
+            }
+
+            /* Øverste venstre hjørne - lodret linje */
+            .border-corner::after {
+              content: "";
+              position: absolute;
+              top: -15px; /* 5px udenfor boksen */
+              left: -15px; /* 5px udenfor boksen */
+              width: 1px; /* Tykkelse af linjen */
+              height: 80px; /* Juster længden */
+              background-color: white;
+            }
+
+            /* Nederste højre hjørne - vandret linje */
+            .border-corner-bottom::before {
+              content: "";
+              position: absolute;
+              bottom: -15px; /* 5px udenfor boksen */
+              right: -15px; /* 5px udenfor boksen */
+              width: 120px; /* Juster længden */
+              height: 1px; /* Tykkelse af linjen */
+              background-color: white;
+            }
+
+            /* Nederste højre hjørne - lodret linje */
+            .border-corner-bottom::after {
+              content: "";
+              position: absolute;
+              bottom: -15px; /* 5px udenfor boksen */
+              right: -15px; /* 5px udenfor boksen */
+              width: 1px; /* Tykkelse af linjen */
+              height: 80px; /* Juster længden */
+              background-color: white;
+            }
+          </style>
+
+          <!-- Nederste højre hjørne -->
+          <div class="border-corner-bottom"></div>
+        </div>
+      </div>
+    </section>
+            
       <hr />
-      <div>
+      <div class="pb-20 pt-20">
         <h2 class="text-center lg:text-4xl text-creme p-6">Tilmeld dig vores nyhedsbrev</h2>
         <div class="flex justify-center items-center">
           <input class="text-center shadow appearance-none border rounded-[100px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Indtast mail" />
         </div>
         <Button>Tilmeld</Button>
       </div>
+          <hr />
     </section>
         </section>
 
-    <!-- <div>
-      <section class="pt-[7rem]">
-        <div class=" bg-blue">
-      <section class="mb-[20vh]">
-        <div>
- <h2 class="text-6xl text-center text-creme">4 Vores effekt</h2>
-        </div>
-       <div class=" text-creme">
- <Boks>Plastikforurening er et kæmpe problem. Plastik hober sig op i naturen og skader både dyr og mennesker. Dyr kan dø, når de spiser eller bliver fanget i plastikaffald. Små stykker plastik, kaldet mikroplast, ender i vores mad og vand og kan gøre mennekser syge.</Boks>
-       </div>
-       <div class="pt-12 text-creme">
- <Boks>Plastikforurening er et kæmpe problem. Plastik hober sig op i naturen og skader både dyr og mennesker. Dyr kan dø, når de spiser eller bliver fanget i plastikaffald. Små stykker plastik, kaldet mikroplast, ender i vores mad og vand og kan gøre mennekser syge.</Boks>
-       </div>
-
-      </section>
-    </div> -->
+    
      <!--  nyhedsbrevt -->
 
-    
   </article>
 
-  <script>
-    import { animate, stagger, inView, scroll, timeline } from "motion";
+	
+<div class="progress-bar h-4 fixed w-full bg-gradient-to-r from-creme to-peach left-0 origin-top-left top-0 right-0"></div>
+  
+</MainLayout>
+<style>
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+  }
 
-    // Progress bar animation
-    scroll(animate(".progress-bar", { scaleX: [0, 1] }));
+ 
+</style>
 
+<script>
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+  inView(".fotoinview", () => {
+    animate(".fotoinview", { x: [-2000, 0] }, { duration: 5 });
+  });
+  
     // Photo in view animation
     inView(".fotoinview", () => {
-      animate(".fotoinview", { x: [-2000, 0] }, { duration: 5 });
+      animate(".fotoinview", { x: [-2000, 0] }, { duration: 3 });
     });
 
     scroll(animate(".progress-bar", { scaleX: [0, 1] }));
 
-    inView(".fotoinview", () => {
-      animate(".fotoinview", { x: [-2000, 0] }, { duration: 5 });
-    });
+   
 
     // Parallax-effekt for sektioner
     const parallaxElements = document.querySelectorAll(".parallaxelement");
@@ -276,17 +486,57 @@ import icon_ig from "./public/icon_ig.png";
 	}),
 	{ target: document.querySelector("#horisontalscrollsection") }
 	); 
-  </script>
 
-  <!-- // import { animate, stagger, inView, scroll, timeline } from "motion";
-  // scroll(animate(".progress-bar", { scaleX: [0, 1] }));
+	inView( ".inviewreturn", ({ target }) => {
+  	animate(
+      target,
+      { rotate: [180, 0] },
+      { delay: 1, duration: 2 },
+  	) 
+    return () => {
+      animate(
+        target,
+        { rotate: 180 }
+      )
+  	}
+	}) 
 
-  // inView(".fotoinview", () => { -->
-  <!-- //   animate(".fotoinview", { x: [-2000, 0] }, { duration: 5 });
-  // });
+  import Splitting from "splitting";
+  import "splitting/dist/splitting.css"; // Importer Splitting.js CSS
+  import gsap from "gsap";
+  document.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("overlay");
+    const herotitle = document.getElementById("herotitle").querySelector("h1");
 
-  // /* Parallax med tekstboks */
-  // scroll(animate(".parallaxelement", { y: [50, 500] }), { -->
-  <!-- //   target: document.querySelector(".parallaxelement"),
-  // }); -->
-</MainLayout>
+    if (herotitle) {
+      const result = Splitting({ target: herotitle, by: "chars" });
+
+      const chars = result[0].chars;
+
+      const tl = gsap.timeline();
+
+
+      tl.to(overlay, {
+        duration: 1,
+        scaleY: 0,
+        transformOrigin: "top",
+        ease: "power2.inOut",
+      });
+
+      tl.from(
+        chars,
+        {
+          opacity: 0,
+          y: 80,
+          rotateX: -90,
+          stagger: 0.05,
+          duration: 1,
+          ease: "back.out(1.7)",
+        },
+        "-=0.5"
+      );
+    }
+  });
+
+
+</script>
