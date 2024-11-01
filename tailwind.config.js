@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       cursor: {
-        handcursor: "url(./src/assets/images/flaske.png) 25 25, pointer",
+        handcursor: "url(/flaske.png) 25 25, pointer",
       },
 
       colors: {
