@@ -26,6 +26,8 @@ import skrald2 from "./public/skrald2.png";
 import skrald3 from "./public/skrald3.png";
 import skrald4 from "./public/skrald4.png";
 import skrald5 from "./public/skrald5.png";
+import vandmand1 from "./public/vandmand1.png";
+import vandmand2 from "./public/vandmand2.png";
 ---
 
 <MainLayout title="Titel">
@@ -54,7 +56,7 @@ import skrald5 from "./public/skrald5.png";
   STOP MED PLASTIKFORURENING NU!
 </Button>
       <div class="relative">
-        <Image src={bjarne} alt="" class="absolute lg:top-[-488px] lg:left-[406px] lg:w-[380px] w-[180px] h-auto animate-float top-[-220px] left-[280px]" />
+        <Image src={bjarne} alt="" class="absolute lg:top-[-488px] lg:left-[406px] lg:w-[380px] w-[180px] h-auto animate-float top-[-320px] left-[280px]" />
         <Image src={rings} alt="" class="absolute lg:top-[-115px] lg:left-[620px] w-32 h-auto top-[-20px] left-[280px] animate-float" />
         <Image src={skraldepose} alt="" class="absolute lg:top-[-120px] lg:left-[80px] w-40 h-auto animate-float top-[-20px] left-[40px]" />
       </div>
@@ -66,11 +68,16 @@ import skrald5 from "./public/skrald5.png";
     <!-- sektion Hvad er plastikforurening -->
 
      <section id="Hvaderplastikforurening"class=" bg-cover bg-center " style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
-      <div class="flex items-end justify-center mb-10 gap-4 pt-14">
-     <h2 class="text-2xl items-end md:text-9xl stroke-text">1</h2>
+      
+      <div class="flex items-center justify-center mb-10 gap-4 pt-14">
+     <h2 class="text-4xl items-center md:text-9xl stroke-text">1</h2>
+     
          
   <h2 class="text-2xl md:text-7xl mb-12 text-creme"> Hvad er plastikforurening?</h2>
       </div>
+
+
+
       
 
     
@@ -82,7 +89,7 @@ import skrald5 from "./public/skrald5.png";
 
 
 
-        <div class="flex justify-center mt-56 mb-48">
+        <div class="md:flex md:justify-center mt-56 mb-48">
   <div class=" pt-6 md:w-2/3 md:flex  md:ml-44 fotoinview mb-36">
           <Image src={graf} alt="graf" />
           </div>
@@ -119,7 +126,7 @@ import skrald5 from "./public/skrald5.png";
       <div class="content-wrapper relative z-10 flex flex-col items-center justify-center h-full">
         <section class="">
      <div class="flex items-center justify-center mb-10 pt-28 gap-4">
-     <h2 class="text-2xl items-end md:text-9xl stroke-text">2</h2>
+     <h2 class="text-4xl items-end md:text-9xl stroke-text">2</h2>
   <h2 class="text-2xl md:text-7xl text-creme">Problemet med 
 plastikforurening</h2>
       </div>
@@ -131,11 +138,11 @@ plastikforurening</h2>
 
      <section class="min-h-[350vh] bg-cover bg-center" style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
        <section class="relative">
-  <div class="absolute right-4 top-1/3 lg:w-2/12 pl-6 sticky">
+  <div class="w-20 sticky right-4 top-1/3 md:right-4 md:top-1/3 lg:w-2/12 md:pl-6 md:sticky">
     <Image src={mikroplast} alt="gif" />
   </div>
   
-  <div class="flex flex-col items-center space-y-20">
+  <div class="md:flex md:flex-col md:items-center md:space-y-20">
     <div class="min-h-screen flex items-center text-creme">
       <Boks>Plastikforurening er et kæmpe problem. Plastik hober sig op i naturen og skader både dyr og mennesker. Dyr kan dø, når de spiser eller bliver fanget i plastikaffald. Små stykker plastik, kaldet mikroplast, ender i vores mad og vand og kan gøre mennesker syge.</Boks>
     </div>
@@ -146,8 +153,8 @@ plastikforurening</h2>
   </div>
 </section>
         
-  <section class="pt-64">
-    <div class="flex text-creme ">
+  <section class=" pt-20 md:pt-64">
+    <div class="md:flex text-creme ">
       <div class="ml-8 mr-8 mt-10 mb-6 md:max-w-xl ">
         <hr class="md:max-w-xl pb-4">
 <h3>
@@ -158,7 +165,7 @@ Så mange år tager det for blot et par plastikgenstande at nedbrydes til mikrop
       </p>
       </div>
 
-           <div class="scrollzoom overflow-clip min-h-screen flex items-center  md:w-1/2 inviewreturn pb-64">     <Image src={figur_skrald} alt="graf" />
+           <div class="scrollzoom overflow-clip min-h-screen pt-6 pl-16 md:flex md:items-center w-72  md:w-1/2 inviewreturn md:pb-64">     <Image src={figur_skrald} alt="graf" />
             </div>
           </div>
 
@@ -169,7 +176,7 @@ Så mange år tager det for blot et par plastikgenstande at nedbrydes til mikrop
        
             
 
-         <div class="text-white md:w-2/3 grid grid-cols-1 lg:grid-cols-3 gap-8 pt-12 pb-96 max-w-4xl mx-auto fotoinview md:mt-28">
+         <div class="text-white md:w-2/3 grid grid-cols-1 lg:grid-cols-3 gap-8 pt-4 md:pt-12 pb-96 max-w-4xl mx-auto fotoinview md:mt-28">
       <div class="relative p-6">
         <h2 class="text-xl">Langsom nedbrydning</h2>
         <h2 class="text-[#FF6F61]">01</h2>
@@ -247,7 +254,7 @@ Så mange år tager det for blot et par plastikgenstande at nedbrydes til mikrop
 
 <section class="flex flex-col items-center pt-64 pb-64 ">
   
-    <h3 class=" text-3xl text-creme">
+    <h3 class=" pl-8  md:text-3xl text-creme">
       Vær med til at sprede vores budskab på de sociale medier ved at bruge vores hashtag
     </h3>
 
@@ -286,7 +293,20 @@ Så mange år tager det for blot et par plastikgenstande at nedbrydes til mikrop
 
       </div>
     </div>
+
+
+
      <section class="min-h-[350vh] bg-cover bg-center" style="background-image: url('./deepdown2.webp'); background-attachment: fixed;">
+     
+      <section class="relative">
+
+      
+      <div class="w-64 sticky right-4 top-1/3 md:right-4 md:top-1/3 lg:w-2/12 md:pl-6 md:sticky">
+
+      
+      <Image src={vandmand1} alt="vandmand" />
+      </div>
+      
           <div class="flex flex-col items-center space-y-20">
             <div class="min-h-screen flex items-center  text-creme">
               <Boks>Vi fortæller om udfordringer ved plastik og plastikforureningens omfang, og konsekvenser for vores vand- og havmiljø.</Boks>
@@ -307,6 +327,7 @@ Så mange år tager det for blot et par plastikgenstande at nedbrydes til mikrop
               </Boks>
             </div>    
           </div>
+          </section>
           <section>
 
                 <hr />
